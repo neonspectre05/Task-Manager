@@ -97,3 +97,36 @@ document.getElementById('taskInput').addEventListener('keypress', function(e) {
         addTask();
     }
 });
+
+// Theme functionality
+function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    body.classList.toggle('dark-theme');
+
+    if (body.classList.contains('dark-theme')) {
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        themeToggle.textContent = '☀️';
+    }
+}
+
+// Load theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadTheme();
+    renderTasks();
+});
