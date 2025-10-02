@@ -99,3 +99,36 @@ document.getElementById('taskInput').addEventListener('keypress', function(e) {
         addTask();
     }
 });
+
+// Sorting functionality
+let currentSort = 'newest'; // newest, oldest, alphabetical
+
+function sortTasks(sortType) {
+    currentSort = sortType;
+
+    switch(sortType) {
+        case 'oldest':
+            tasks.sort((a, b) => a.id - b.id);
+            break;
+        case 'alphabetical':
+            tasks.sort((a, b) => a.text.toLowerCase().localeCompare(b.text.toLowerCase()));
+            break;
+        case 'newest':
+        default:
+            tasks.sort((a, b) => b.id - a.id);
+            break;
+    }
+
+    renderTasks();
+    updateSortButtons();
+}
+
+function updateSortButtons() {
+    const buttons = document.querySelectorAll('.sort-buttons button');
+    buttons.forEach(button => {
+        button.classList.remove('active');
+        if (button.onclick.toString().includes(currentSort)) {
+            button.classList.add('active');
+        }
+    });
+}
