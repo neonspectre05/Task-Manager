@@ -83,7 +83,9 @@ function showCompleted() {
 
 function updateTaskCount() {
     const activeTasks = tasks.filter(task => !task.completed).length;
-    document.getElementById('taskCount').textContent = `${activeTasks} tasks remaining`;
+    const taskWord = activeTasks === 1 ? 'task' : 'tasks';
+document.getElementById('taskCount').textContent = `${activeTasks} ${taskWord} remaining`;
+
 }
 
 // Initialize
