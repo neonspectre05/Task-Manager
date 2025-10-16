@@ -23,7 +23,13 @@ function addTask() {
 
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
-    renderTasks();
+    function deleteTask(id) {
+    if (confirm('Are you sure you want to delete this task?')) {
+        tasks = tasks.filter(task => task.id !== id);
+        renderTasks();
+    }
+}
+
 }
 
 function toggleTask(id) {
@@ -83,7 +89,9 @@ function showCompleted() {
 
 function updateTaskCount() {
     const activeTasks = tasks.filter(task => !task.completed).length;
-    document.getElementById('taskCount').textContent = `${activeTasks} tasks remaining`;
+    const taskWord = activeTasks === 1 ? 'task' : 'tasks';
+document.getElementById('taskCount').textContent = `${activeTasks} ${taskWord} remaining`;
+
 }
 
 // Initialize
