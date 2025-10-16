@@ -106,35 +106,35 @@ document.getElementById('taskInput').addEventListener('keypress', function(e) {
     }
 });
 
-// Sorting functionality
-let currentSort = 'newest'; // newest, oldest, alphabetical
+// Theme functionality
+function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.querySelector('.theme-toggle');
 
-function sortTasks(sortType) {
-    currentSort = sortType;
+    body.classList.toggle('dark-theme');
 
-    switch(sortType) {
-        case 'oldest':
-            tasks.sort((a, b) => a.id - b.id);
-            break;
-        case 'alphabetical':
-            tasks.sort((a, b) => a.text.toLowerCase().localeCompare(b.text.toLowerCase()));
-            break;
-        case 'newest':
-        default:
-            tasks.sort((a, b) => b.id - a.id);
-            break;
+    if (body.classList.contains('dark-theme')) {
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
     }
+}
 
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        themeToggle.textContent = '☀️';
+    }
+}
+
+// Load theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadTheme();
     renderTasks();
-    updateSortButtons();
-}
-
-function updateSortButtons() {
-    const buttons = document.querySelectorAll('.sort-buttons button');
-    buttons.forEach(button => {
-        button.classList.remove('active');
-        if (button.onclick.toString().includes(currentSort)) {
-            button.classList.add('active');
-        }
-    });
-}
+});
