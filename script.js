@@ -7,7 +7,11 @@ function addTask() {
     
     if (taskText === '') {
         alert('Please enter a task!');
-        return;
+        if (taskText.length > 100) {
+    alert('Task is too long! Maximum 100 characters.');
+    return;
+}
+
     }
 
     const task = {
@@ -90,7 +94,9 @@ function showCompleted() {
 function updateTaskCount() {
     const activeTasks = tasks.filter(task => !task.completed).length;
     const taskWord = activeTasks === 1 ? 'task' : 'tasks';
+const taskWord = activeTasks === 1 ? 'task' : 'tasks';
 document.getElementById('taskCount').textContent = `${activeTasks} ${taskWord} remaining`;
+
 
 }
 
