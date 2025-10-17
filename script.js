@@ -7,7 +7,11 @@ function addTask() {
     
     if (taskText === '') {
         alert('Please enter a task!');
-        return;
+        if (taskText.length > 100) {
+    alert('Task is too long! Maximum 100 characters.');
+    return;
+}
+
     }
 
     const task = {
