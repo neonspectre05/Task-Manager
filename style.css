@@ -67,6 +67,11 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.filter-buttons button.active {
+    background: #007bff;
+    color: white;
+}
+
 .task-item {
     display: flex;
     align-items: center;
