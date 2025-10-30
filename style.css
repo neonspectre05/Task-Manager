@@ -62,6 +62,46 @@ button:hover {
     background: #6c757d;
 }
 
+.sort-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-buttons span {
+    color: #666;
+    font-weight: bold;
+}
+
+.sort-buttons button {
+    background: #28a745;
+    margin-left: 0;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.sort-buttons button:hover {
+    background: #218838;
+}
+
+.sort-buttons button.active {
+    background: #155724;
+}
+
+.dark-theme .sort-buttons span {
+    color: #ccc;
+}
+
+.dark-theme .sort-buttons button {
+    background: #28a745;
+}
+
+.dark-theme .sort-buttons button:hover {
+    background: #218838;
+}
+
+
 #taskList {
     list-style: none;
     margin-bottom: 20px;
