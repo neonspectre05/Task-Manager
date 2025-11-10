@@ -1,24 +1,34 @@
-# Task Manager
+# Менеджер Завдань
 
-A simple task management application built with vanilla HTML, CSS, and JavaScript.
+Простий додаток для управління завданнями, створений на HTML, CSS та JavaScript.
 
-## Features
+## Функції
 
-- Add new tasks
-- Mark tasks as completed
-- Delete tasks
-- Filter tasks (All, Active, Completed)
-- Task counter
+- Додавання нових завдань
+- Позначення завдань як виконаних
+- Видалення завдань
+- Фільтрація завдань (Всі, Активні, Виконані)
+- Лічильник завдань
 
-## How to use
+## Як використовувати
 
-1. Open index.html in your web browser
-2. Enter a task in the input field
-3. Click "Add Task" or press Enter
-4. Use checkboxes to mark tasks as completed
-5. Use filter buttons to view different task states
-6. Click "Delete" to remove tasks
+1. Відкрийте index.html у веб-браузері
+2. Введіть завдання в поле для вводу
+3. Натисніть "Add Task" або Enter
+4. Використовуйте чекбокси для позначення завдань як виконаних
+5. Використовуйте кнопки фільтрів для перегляду різних станів завдань
+6. Натисніть "Delete" щоб видалити завдання
 
-## Installation
+## Встановлення
 
-No installation required. Simply download the files and open index.html in any modern web browser.
+Встановлення не потрібне. Просто завантажте файли та відкрийте index.html в будь-якому сучасному браузері.
+
+## Технології
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+## Автор
+
+Task Manager Team
