@@ -41,6 +41,18 @@ function toggleTask(id) {
     if (task) {
         task.completed = !task.completed;
         renderTasks();
+        function editTask(id) {
+    const task = tasks.find(task => task.id === id);
+    if (task) {
+        const newText = prompt('Edit task:', task.text);
+        if (newText && newText.trim() !== '') {
+            task.text = newText.trim();
+            renderTasks();
+        }
+    }
+}
+
+        
     }
 }
 
@@ -55,11 +67,12 @@ function renderTasks() {
         li.className = task.completed ? 'task-item completed' : 'task-item';
         
         li.innerHTML = `
-            <input type="checkbox" ${task.completed ? 'checked' : ''} 
-                   onchange="toggleTask(${task.id})">
-            <span>${task.text}</span>
-            <button class="delete-btn" onclick="deleteTask(${task.id})">Delete</button>
-        `;
+    <input type="checkbox" ${task.completed ? 'checked' : ''}
+           onchange="toggleTask(${task.id})">
+    <span ondblclick="editTask(${task.id})">${task.text}</span>
+    <button class="delete-btn" onclick="deleteTask(${task.id})">Delete</button>
+`;
+
         
         taskList.appendChild(li);
     });
