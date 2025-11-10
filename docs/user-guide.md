@@ -1,23 +1,40 @@
-# User Guide
+# Інструкція користувача
 
-## Getting Started
+## Початок роботи
 
-Welcome to Task Manager! This guide will help you use all the features.
+Ласкаво просимо до Менеджера Завдань! Ця інструкція допоможе вам використовувати всі функції додатку.
 
-## Adding Tasks
+## Додавання завдань
 
-1. Type your task in the text input
-2. Click "Add Task" button or press Enter
-3. Your task will appear in the list below
+1. Введіть текст завдання в поле вводу
+2. Натисніть кнопку "Add Task" або Enter
+3. Ваше завдання з'явиться в списку нижче
 
-## Managing Tasks
+### Приклади завдань:
+- "Купити продукти"
+- "Зателефонувати лікарю"
+- "Завершити проект до п'ятниці"
 
-- **Mark as completed**: Click the checkbox next to the task
-- **Delete task**: Click the red "Delete" button
-- **View different tasks**: Use the filter buttons (All, Active, Completed)
+## Управління завданнями
 
-## Tips
+- **Позначити як виконане**: Натисніть чекбокс поруч із завданням
+- **Видалити завдання**: Натисніть червону кнопку "Delete"
+- **Переглядати різні завдання**: Використовуйте кнопки фільтрів
 
-- Keep task descriptions short and clear
-- Use the filter buttons to focus on what you need to do
-- The counter shows how many tasks are still active
+## Фільтри
+
+- **All (Всі)**: Показує всі завдання
+- **Active (Активні)**: Показує тільки невиконані завдання
+- **Completed (Виконані)**: Показує тільки виконані завдання
+
+## Корисні поради
+
+- Тримайте описи завдань короткими та зрозумілими
+- Використовуйте фільтри, щоб зосередитися на потрібному
+- Лічильник показує кількість активних завдань
+- Завдання можна редагувати подвійним кліком
+
+## Гарячі клавіші
+
+- **Enter**: Додати нове завдання
+- **Подвійний клік**: Редагувати завдання
