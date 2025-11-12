@@ -204,3 +204,22 @@ button:hover {
 .theme-toggle:hover {
     background: #5a6268;
 }
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .add-task {
+        flex-direction: column;
+    }
+
+    #taskInput {
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-left: 0;
+    }
+}
