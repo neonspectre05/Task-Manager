@@ -1,5 +1,11 @@
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 let currentFilter = 'all';
+
+// Save tasks to localStorage
+function saveTasks() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
 
 function addTask() {
     const input = document.getElementById('taskInput');
