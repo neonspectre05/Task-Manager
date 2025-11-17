@@ -32,9 +32,26 @@
 
         <ul id="taskList"></ul>
         
-        <div class="stats">
-            <span id="taskCount">0 tasks remaining</span>
+<div class="stats">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <span class="stat-number" id="totalTasks">0</span>
+            <span class="stat-label">Total</span>
         </div>
+        <div class="stat-item">
+            <span class="stat-number" id="activeTasks">0</span>
+            <span class="stat-label">Active</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="completedTasks">0</span>
+            <span class="stat-label">Completed</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="completionRate">0%</span>
+            <span class="stat-label">Completed</span>
+        </div>
+    </div>
+</div>
     </div>
 
     <script src="script.js"></script>
