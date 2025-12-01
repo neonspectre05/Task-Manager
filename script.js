@@ -111,12 +111,15 @@ function showCompleted() {
 }
 
 function updateTaskCount() {
+    const totalTasks = tasks.length;
     const activeTasks = tasks.filter(task => !task.completed).length;
-    const taskWord = activeTasks === 1 ? 'task' : 'tasks';
-const taskWord = activeTasks === 1 ? 'task' : 'tasks';
-document.getElementById('taskCount').textContent = `${activeTasks} ${taskWord} remaining`;
+    const completedTasks = tasks.filter(task => task.completed).length;
+    const completionRate = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
 
-
+    document.getElementById('totalTasks').textContent = totalTasks;
+    document.getElementById('activeTasks').textContent = activeTasks;
+    document.getElementById('completedTasks').textContent = completedTasks;
+    document.getElementById('completionRate').textContent = completionRate + '%';
 }
 
 // Initialize
