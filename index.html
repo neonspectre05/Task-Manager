@@ -16,6 +16,11 @@
             <button onclick="addTask()">Додати завдання</button>
         </div>
 
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Пошук завдань..." onkeyup="searchTasks()">
+            <button onclick="clearSearch()">✕</button>
+        </div>
+
         <div class="filter-buttons">
             <button onclick="showAll()">Всі</button>
             <button onclick="showActive()">Активні</button>
